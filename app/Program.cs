@@ -64,9 +64,12 @@
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
             // Работа с БД
-            /*string tableName = "main_node";
+            string tableName = "main_node";
             var db = new Storage(tableName);
-            await db.CreateTable();
+            
+            await db.CreateTable(); // Создание таблицы
+            
+            // Добавление в таблицу
             await db.Insert(currentDateTime.ToString(),
                   Convert.ToInt64(PRMB),
                   Convert.ToInt64(MMTB),
@@ -75,6 +78,7 @@
                   Convert.ToInt64(NTBT),
                   Convert.ToInt64(FSB),
                   Convert.ToInt64(FFB));
-            Console.WriteLine(await db.GetMetricsRecords());*/
+
+            List<MetricsRecord> data = new List<MetricsRecord>(await db.GetMetricsRecords()); // Список метрик из таблицы
       }
 }

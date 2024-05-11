@@ -1,14 +1,14 @@
 public class MetricsRecord
 {
-      private int id;
-      private string date_time;
-      private long MMTB;
-      private long PRMB;
-      private double PCST;
-      private long NRBT;
-      private long NTBT;
-      private long FSB;
-      private long FFB;
+      public int id {get; private set;}
+      public string date_time {get; private set;}
+      public long MMTB {get; private set;}
+      public long PRMB {get; private set;}
+      public double PCST {get; private set;}
+      public long NRBT {get; private set;}
+      public long NTBT {get; private set;}
+      public long FSB {get; private set;}
+      public long FFB {get; private set;}
 
     public MetricsRecord(int id, string date_time, long MMTB, long PRMB, double PCST, long NRBT, long NTBT, long FSB, long FFB)
     {
